@@ -1,4 +1,4 @@
-# Holy Quran Web Application
+# Holy Quran Web Application.
 
 A beautiful web application for reading the complete Holy Quran with Arabic text, Roman English transliteration, and Telugu translation. Features a colorful holy theme with gold and green colors.
 
@@ -85,4 +85,5 @@ src/
 ## License
 
 Created for educational and personal use.
+
 
