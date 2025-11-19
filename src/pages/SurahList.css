@@ -1,0 +1,265 @@
+.surah-list-page {
+  min-height: 100vh;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f5f5f0 0%, #e8e8e3 50%, #f0f0eb 100%);
+}
+
+.surah-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 25px 30px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 245, 240, 0.95) 100%);
+  border: 3px solid #b8860b;
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px rgba(184, 134, 11, 0.2),
+    inset 0 0 30px rgba(20, 150, 150, 0.1);
+  position: relative;
+}
+
+.surah-count {
+  font-size: 14px;
+  color: #149696;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.surah-list-header::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px solid rgba(20, 150, 150, 0.3);
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+.surah-list-header h1 {
+  font-size: 38px;
+  background: linear-gradient(135deg, #b8860b 0%, #daa520 50%, #cd853f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+}
+
+.back-button {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 245, 240, 0.95) 100%);
+  border: 2px solid #b8860b;
+  color: #b8860b;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(184, 134, 11, 0.2);
+}
+
+.back-button:hover {
+  background: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
+  color: white;
+  transform: translateX(-3px);
+  box-shadow: 0 6px 20px rgba(184, 134, 11, 0.3);
+}
+
+.surah-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.surah-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 245, 240, 0.95) 100%);
+  border: 3px solid #b8860b;
+  border-radius: 20px;
+  padding: 25px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 
+    0 8px 32px rgba(184, 134, 11, 0.2),
+    inset 0 0 30px rgba(20, 150, 150, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.surah-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(20, 150, 150, 0.15) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.surah-card:hover::before {
+  opacity: 1;
+}
+
+.surah-card::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border: 2px solid rgba(20, 150, 150, 0.2);
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+.surah-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 12px 40px rgba(184, 134, 11, 0.3),
+    inset 0 0 40px rgba(20, 150, 150, 0.15);
+  border-color: #daa520;
+}
+
+.surah-card:active {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.surah-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4);
+  border: 3px solid #149696;
+  position: relative;
+}
+
+.surah-number::before {
+  content: '✦';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 16px;
+  color: #149696;
+  background: rgba(255, 255, 255, 0.9);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #b8860b;
+}
+
+.surah-info {
+  flex: 1;
+}
+
+.surah-name {
+  font-size: 26px;
+  background: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-family: 'Georgia', serif;
+}
+
+.surah-name-english {
+  font-size: 16px;
+  color: #2c2c2c;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.surah-name-telugu {
+  font-size: 14px;
+  color: #149696;
+  font-weight: 500;
+}
+
+.surah-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 2px solid rgba(184, 134, 11, 0.3);
+}
+
+.ayah-count {
+  font-size: 14px;
+  color: #149696;
+  font-weight: 600;
+}
+
+.revelation-type {
+  font-size: 12px;
+  background: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.results-count {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(245, 245, 240, 0.8) 100%);
+  border: 2px solid rgba(184, 134, 11, 0.3);
+  border-radius: 12px;
+  color: #2c2c2c;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 245, 240, 0.95) 100%);
+  border: 3px solid #b8860b;
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px rgba(184, 134, 11, 0.2),
+    inset 0 0 30px rgba(20, 150, 150, 0.1);
+}
+
+.no-results p {
+  font-size: 18px;
+  color: #2c2c2c;
+  background: linear-gradient(135deg, #b8860b 0%, #149696 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .surah-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .surah-list-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}
