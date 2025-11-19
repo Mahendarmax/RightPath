@@ -10,7 +10,7 @@ import './App.css'
 function App() {
   return (
     <SettingsProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <div className="app">
           <Routes>
             <Route path="/" element={<Home />} />
